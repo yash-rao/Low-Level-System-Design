@@ -1,31 +1,27 @@
 # 🧠 Observer Pattern (Low-Level System Design)
 
-This project demonstrates the **Observer Design Pattern** implementation in Java — where multiple observers subscribe to an observable (subject) and are automatically notified when the subject’s state changes.
+This project demonstrates the **Observer Design Pattern** in Java, where observers subscribe to a subject and are notified when its state changes.
 
 ---
 
-## 📘 Overview
+## 📊 UML Diagram
 
-The **Observer Pattern** is a **behavioral design pattern** that defines a **one-to-many dependency** between objects.  
-When one object (the **Subject**) changes its state, all its dependents (**Observers**) are notified automatically.
-
-**Example Scenario:**  
-When the stock of iPhones becomes available again, all users subscribed to stock alerts receive notifications via email or message.
+<p align="center">
+  <img src="./UML_Diagram_Observer%20Pattern.png" alt="Observer Pattern UML Diagram" width="900">
+</p>
 
 ---
 
 ## 🧩 Class Structure
 
-### Key Components
-
 | Role | Class / Interface | Description |
-|------|------------------|--------------|
-| **Subject (Observable)** | `StockObservable`, `IphoneStocksObservable` | Maintains list of observers and notifies them on state change |
-| **Observer** | `NotificationAlertObserver` | Defines the update() interface to receive notifications |
-| **Concrete Observers** | `EmailAlertObserver`, `MessageAlertObserver` | Receive and display updates |
-| **Client** | `Main` | Demonstrates adding observers and changing stock state |
+|------|------------------|-------------|
+| **Subject (Observable)** | `StockObservable`, `IphoneStocksObservable` | Holds observers and notifies on state change |
+| **Observer** | `NotificationAlertObserver` | Defines `update()` |
+| **Concrete Observers** | `EmailAlertObserver`, `MessageAlertObserver` | React to updates |
+| **Client** | `Main` | Wires everything and changes stock |
 
 ---
 
-## 🧱 Project Structure
+## 📂 Project Layout
 
